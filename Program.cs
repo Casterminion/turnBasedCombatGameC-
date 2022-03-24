@@ -130,9 +130,14 @@ class main{
                     Console.WriteLine("The spider has " + spider.HP + " health");
                     Console.WriteLine(" ");
                     Console.WriteLine(" ");
+
+
+                    
                 }
                 
-
+                    if(player1.hp <= 0){
+                    Console.WriteLine("uffff you died, good luck next time");
+                    }
             }
                 Console.WriteLine("You killed the spider, now next monster is waiting for you");
                 
@@ -186,11 +191,17 @@ class main{
                 
 
             }
+                    if(player1.hp <= 0){
+                    Console.WriteLine("uffff you died, good luck next time");
+                    }
                 Console.WriteLine("You killed the worm, now next monster is waiting for you");
   
 
         //fight vs slime
             while(slime.HP >= 0){
+                while(player1.hp <= 0){
+                    Environment.Exit(0);
+                }
                 //slime attack
                 Console.WriteLine("Type \"k\" to attack with knife or \"s\" to attack with sword, or \"b\" to block enemy attack");
                 Console.Write("Your weapon or defence: ");
@@ -238,11 +249,15 @@ class main{
                 
 
             }
+            
                 Console.WriteLine("You killed the slime, now next monster is waiting for you");
            
 
           //fight vs skeleton
             while(skeleton.HP >= 0){
+                 while(player1.hp <= 0){
+                    Environment.Exit(0);
+                }
                 //skeleton attack
                 Console.WriteLine("Type \"k\" to attack with knife or \"s\" to attack with sword, or \"b\" to block enemy attack");
                 Console.Write("Your weapon or defence: ");
@@ -295,6 +310,9 @@ class main{
 
           //fight vs succubus
             while(succubus.HP >= 0){
+                 while(player1.hp <= 0){
+                    Environment.Exit(0);
+                }
                 //succubus attack
                 Console.WriteLine("Type \"k\" to attack with knife or \"s\" to attack with sword, or \"b\" to block enemy attack");
                 Console.Write("Your weapon or defence: ");
@@ -342,21 +360,19 @@ class main{
                 
 
             }
-                Console.WriteLine("You killed the succubus, now next monster is waiting for you");
+           
   
         //TODO loosing part
-        if(player1.hp <= 0){
-        Console.WriteLine("uffff you died, good luck next time");
-        }
+
         
         //TODO wining part 
         if(succubus.HP <= 0){
             Console.WriteLine("Conrgatulations for killing all of the monsters in area");
             Console.WriteLine("Victory");
         }
-        
-    }
 
+           
+    }
 
   
     
