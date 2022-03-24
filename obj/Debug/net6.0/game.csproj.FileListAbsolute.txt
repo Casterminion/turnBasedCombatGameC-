@@ -13,3 +13,6 @@ C:\Users\ariju\OneDrive\Stalinis kompiuteris\turn based combat game\game\obj\Deb
 C:\Users\ariju\OneDrive\Stalinis kompiuteris\turn based combat game\game\obj\Debug\net6.0\game.pdb
 C:\Users\ariju\OneDrive\Stalinis kompiuteris\turn based combat game\game\obj\Debug\net6.0\game.genruntimeconfig.cache
 C:\Users\ariju\OneDrive\Stalinis kompiuteris\turn based combat game\game\obj\Debug\net6.0\ref\game.dll
+C:\Users\ariju\OneDrive\Stalinis kompiuteris\turn based combat game\game\bin\Debug\net6.0\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\ariju\OneDrive\Stalinis kompiuteris\turn based combat game\game\bin\Debug\net6.0\Microsoft.Extensions.Primitives.dll
+C:\Users\ariju\OneDrive\Stalinis kompiuteris\turn based combat game\game\obj\Debug\net6.0\game.csproj.CopyComplete

@@ -375,7 +375,6 @@ class main{
 
 
     //Inkapsuliacija ir easter egg 
-    //TODO tiktai kazko nenori veikti 
     private static void SlimeAttack(string dmg){
         Console.WriteLine("You used special slime attack that you obtained after killing a slime to destroy the area");
         Console.WriteLine("But in the area there existed a whole bunch of atomic bombs so in the end you killed monsters, but");
