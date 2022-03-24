@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "QeAZrlPO+my2NZ+d9T/dC7YSQNTvYyU5oEypShxC0dqjBLkWVAtBbSdgd0q0BiO2PsaU11PZnQ5vbIO+c0Tl0g==",
+  "dgSpecHash": "Nn4LSDCaW0SSNpfTjsf/LjTO1KvSdPZXF/IzhJ8eS9fMUJf7auLS0HI3nsHKf7pOh98AL5CZ2Guo46WT2+b2sw==",
   "success": true,
   "projectFilePath": "C:\\Users\\ariju\\OneDrive\\Stalinis kompiuteris\\turn based combat game\\game\\game.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\ariju\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\6.0.0\\microsoft.extensions.configuration.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\ariju\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
+    "C:\\Users\\ariju\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+  ],
   "logs": []
 }
