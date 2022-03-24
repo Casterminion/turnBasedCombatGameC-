@@ -137,7 +137,8 @@ class main{
                 
              
             }
-                Console.WriteLine("You killed the spider, now next monster is waiting for you");
+                Console.WriteLine("You killed the spider and gained 50hp, now next monster is waiting for you");
+                player1.hp += 50;
                 
 
         //fight vs worm
@@ -192,8 +193,8 @@ class main{
                     if(player1.hp <= 0){
                     Console.WriteLine("uffff you died, good luck next time");
                     }
-                Console.WriteLine("You killed the worm, now next monster is waiting for you");
-  
+                Console.WriteLine("You killed the worm and gained 70 hp and 13 dmg, now next monster is waiting for you");
+                player1.hp += 70;
 
         //fight vs slime
             while(slime.HP >= 0){
@@ -207,9 +208,9 @@ class main{
                 string action = Console.ReadLine();
                 
                 if(action == "k"){
-                 int knife = new Random().Next(1, 11);
+                 int knife = new Random().Next(14, 20);
                     slime.HP -= knife;
-                    int knife2 = new Random().Next(1, 11);
+                    int knife2 = new Random().Next(14, 21);
                     slime.HP -= knife2;
                     Console.Write("You done " + knife + " damage and with second attack " + knife2 + " damage to slime. ");
                     player1.hp -= slime.damage;
@@ -220,7 +221,7 @@ class main{
                     Console.WriteLine(" ");
                 }
                 else if(action == "s"){
-                    int sword = new Random().Next(5, 25);
+                    int sword = new Random().Next(18, 45);
                     slime.HP -= sword;
                     Console.Write("You done " + sword + " damage to slime. ");
                     player1.hp -= slime.damage;
@@ -249,8 +250,8 @@ class main{
 
             }
             
-                Console.WriteLine("You killed the slime, now next monster is waiting for you");
-           
+                Console.WriteLine("You killed the slime and gained new super power and 100HP, now next monster is waiting for you");
+                player1.hp += 100;
 
           //fight vs skeleton
             while(skeleton.HP >= 0){
@@ -264,9 +265,9 @@ class main{
                 string action = Console.ReadLine();
                 
                 if(action == "k"){
-                 int knife = new Random().Next(1, 11);
+                 int knife = new Random().Next(14, 20);
                     skeleton.HP -= knife;
-                    int knife2 = new Random().Next(1, 11);
+                    int knife2 = new Random().Next(14, 21);
                     skeleton.HP -= knife2;
                     Console.Write("You done " + knife + " damage and with second attack " + knife2 + " damage to skeleton. ");
                     player1.hp -= skeleton.damage;
@@ -277,7 +278,7 @@ class main{
                     Console.WriteLine(" ");
                 }
                 else if(action == "s"){
-                    int sword = new Random().Next(5, 25);
+                    int sword = new Random().Next(18, 45);
                     skeleton.HP -= sword;
                     Console.Write("You done " + sword + " damage to skeleton. ");
                     player1.hp -= skeleton.damage;
@@ -287,11 +288,12 @@ class main{
                     Console.WriteLine(" ");
                     Console.WriteLine(" ");
                 }
-                    else if(action == "b"){
-                    int block = new Random().Next(1, 5);
-                    if(player1.hp < 100){
+                else if(action == "b"){
+                    int block = new Random().Next(30, 45);
+                    if(player1.hp < 320){
                         player1.hp += block;
                     }
+                
                     else{
                         Console.WriteLine("You can't heal more hp");
                     }
@@ -302,10 +304,13 @@ class main{
                     Console.WriteLine(" ");
                     Console.WriteLine(" ");
                 }
+                    else if(action == "boom"){
+                        SlimeAttack("boom");
+                    }
                 
 
             }
-                Console.WriteLine("You killed the skeleton, now next monster is waiting for you");
+                Console.WriteLine("You killed the skeleton, and found the cristal when you touched it, you gain superhuman power +50dmg now next monster is waiting for you");
                 
 
           //fight vs succubus
@@ -320,9 +325,9 @@ class main{
                 string action = Console.ReadLine();
                 
                 if(action == "k"){
-                 int knife = new Random().Next(1, 11);
+                 int knife = new Random().Next(30, 45);
                     succubus.HP -= knife;
-                    int knife2 = new Random().Next(1, 11);
+                    int knife2 = new Random().Next(30, 45);
                     succubus.HP -= knife2;
                     Console.Write("You done " + knife + " damage and with second attack " + knife2 + " damage to succubus. ");
                     player1.hp -= succubus.damage;
@@ -333,7 +338,7 @@ class main{
                     Console.WriteLine(" ");
                 }
                 else if(action == "s"){
-                    int sword = new Random().Next(5, 25);
+                    int sword = new Random().Next(68, 95);
                     succubus.HP -= sword;
                     Console.Write("You done " + sword + " damage to succubus. ");
                     player1.hp -= succubus.damage;
@@ -347,6 +352,9 @@ class main{
                     int block = new Random().Next(1, 5);
                     if(player1.hp < 100){
                         player1.hp += block;
+                    }
+                    else if(action == "boom"){
+                        SlimeAttack("boom");
                     }
                     else{
                         Console.WriteLine("You can't heal more hp");
@@ -373,7 +381,18 @@ class main{
            
     }
 
-  
+
+    //Inkapsuliacija ir easter egg 
+    //TODO tiktai kazko nenori veikti 
+    private static void SlimeAttack(string dmg){
+        Console.WriteLine("You used special slime attack that you obtained after killing a slime to destroy the area");
+        Console.WriteLine("But in the area there existed a whole bunch of atomic bombs so in the end you killed monsters, but");
+        Console.WriteLine("Destroyed whole world.");
+        Console.WriteLine("GGWP, victory");
+        if(dmg == "boom"){
+            Environment.Exit(0);
+        }
+    }
     
 }
 
