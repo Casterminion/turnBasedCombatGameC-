@@ -135,9 +135,7 @@ class main{
                     
                 }
                 
-                    if(player1.hp <= 0){
-                    Console.WriteLine("uffff you died, good luck next time");
-                    }
+             
             }
                 Console.WriteLine("You killed the spider, now next monster is waiting for you");
                 
@@ -200,6 +198,7 @@ class main{
         //fight vs slime
             while(slime.HP >= 0){
                 while(player1.hp <= 0){
+                    Console.WriteLine("uffff you died, good luck next time");
                     Environment.Exit(0);
                 }
                 //slime attack
@@ -256,6 +255,7 @@ class main{
           //fight vs skeleton
             while(skeleton.HP >= 0){
                  while(player1.hp <= 0){
+                    Console.WriteLine("uffff you died, good luck next time");
                     Environment.Exit(0);
                 }
                 //skeleton attack
@@ -311,6 +311,7 @@ class main{
           //fight vs succubus
             while(succubus.HP >= 0){
                  while(player1.hp <= 0){
+                    Console.WriteLine("uffff you died, good luck next time");
                     Environment.Exit(0);
                 }
                 //succubus attack
@@ -361,8 +362,6 @@ class main{
 
             }
            
-  
-        //TODO loosing part
 
         
         //TODO wining part 
