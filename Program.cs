@@ -18,7 +18,17 @@ public class Monster{
     public string name = "monster";
     public int damage;
 
-    public Boolean alive = true;
+
+    //TODO had an idea to make it easier if it tons of monsters, but no clue how to realize
+    // public Boolean alive = true;
+
+
+    //Constructor
+    public Monster(int aHP, string aName, int aDamage){
+        HP = aHP;
+        name = aName;
+        damage = aDamage;
+    }
 }
 
 
@@ -45,35 +55,16 @@ class main{
 
 
         //create monsters
-        Monster spider = new Monster();
-        spider.damage = new Random().Next(1, 8);
-        spider.HP = 40;
-        spider.name = "spider";
-        spider.alive = true;
+        Monster spider = new Monster(40, "spider", new Random().Next(1, 8));
 
-        Monster worm = new Monster();
-        worm.damage = new Random().Next(2, 12);
-        worm.HP = 80;
-        worm.name = "worm";
-        worm.alive = true;
+        Monster worm = new Monster(80, "worm", new Random().Next(2, 12));
 
-        Monster slime = new Monster();
-        slime.damage = new Random().Next(15, 30);
-        slime.HP = 150;
-        slime.name = "slime";
-        slime.alive = true;
+        Monster slime = new Monster(150, "slime", new Random().Next(15, 30));
 
-        Monster skeleton = new Monster();
-        skeleton.damage = new Random().Next(41, 69);
-        skeleton.HP = 250;
-        skeleton.name = "skeleton";
-        skeleton.alive = true;
+        Monster skeleton = new Monster(250, "skeleton", new Random().Next(41, 69));
 
-        Monster succubus = new Monster();
-        succubus.damage = new Random().Next(69, 169);
-        succubus.HP = 420;
-        succubus.name = "succubus";
-        succubus.alive = true;
+        Monster succubus = new Monster(420, "succubus", new Random().Next(69, 169));
+
 
 
 
@@ -349,13 +340,11 @@ class main{
                     Console.WriteLine(" ");
                 }
                     else if(action == "b"){
-                    int block = new Random().Next(1, 5);
-                    if(player1.hp < 100){
+                    int block = new Random().Next(30, 45);
+                    if(player1.hp < 320){
                         player1.hp += block;
                     }
-                    else if(action == "boom"){
-                        SlimeAttack("boom");
-                    }
+                    
                     else{
                         Console.WriteLine("You can't heal more hp");
                     }
@@ -366,6 +355,9 @@ class main{
                     Console.WriteLine(" ");
                     Console.WriteLine(" ");
                 }
+                else if(action == "boom"){
+                        SlimeAttack("boom");
+                    }
                 
 
             }
@@ -396,3 +388,4 @@ class main{
     
 }
 
+//TODO paklaust kaip more effiecent code padaryt
